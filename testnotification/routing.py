@@ -1,4 +1,3 @@
-from django.urls import path
 from notifications.consumer import NotificationConsumer, clear_user_channel_layer
 from django.urls import path
 from channels.routing import ProtocolTypeRouter, URLRouter

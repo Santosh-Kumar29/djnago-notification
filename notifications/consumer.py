@@ -20,7 +20,8 @@ class NotificationConsumer(AsyncWebsocketConsumer):
         login_id = event['login_id']
         notification = Notification(message, login_id)
         await self.send(
-            text_data=json.dumps({'message': notification.message, 'timestamp': str(notification.timestamp)}))
+            text_data=json.dumps({'message': notification.message, 'timestamp': str(notification.timestamp),
+                                  'login_id': str(notification.login_id)}))
 
 
 # for clear memory logs
